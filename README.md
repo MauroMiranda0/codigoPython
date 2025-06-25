@@ -8,5 +8,10 @@ Este proyecto contiene un script llamado `codigo.py` que genera un video vertica
 
 Puedes instalar las dependencias de Python ejecutando:
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
 ```bash
 pip install moviepy
+```
