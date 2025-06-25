@@ -18,9 +18,7 @@ TEXT_COLOR = 'white'
 TEXT_STROKE_COLOR = 'black'
 TEXT_STROKE_WIDTH = 2
 HEADER_FONT_SIZE = 120
-
 BODY_FONT_SIZE = 90
-
 
 def main():
     """Genera un video en base a los clips y recursos configurados."""
