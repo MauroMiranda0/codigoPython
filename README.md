@@ -17,3 +17,7 @@ If you run into a merge conflict while using Git:
 3. Stage the fixed files with `git add`.
 4. Complete the merge by running `git commit`.
 
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
