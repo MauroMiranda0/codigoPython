@@ -10,10 +10,10 @@ pip install -r requirements.txt
 
 ## Resolving merge conflicts
 
-If you run into a merge conflict while using Git:
+When Git cannot automatically merge your changes, resolve the conflicts by following these steps:
 
-1. Run `git status` to list the files that contain conflicts.
-2. Open each file and edit the conflict markers to keep the correct code.
-3. Stage the fixed files with `git add`.
-4. Complete the merge by running `git commit`.
+1. Run `git status` to see which files are in conflict.
+2. Open each conflicted file and remove the conflict markers, keeping the desired code.
+3. Stage the corrected files with `git add`.
+4. Finish the merge by committing the resolution with `git commit`.
 
