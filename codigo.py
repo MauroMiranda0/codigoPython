@@ -1,6 +1,13 @@
 # -*- coding: utf-8 -*-
 import os
-from moviepy.editor import *
+from moviepy.editor import (
+    VideoFileClip,
+    AudioFileClip,
+    CompositeVideoClip,
+    concatenate_videoclips,
+    TextClip,
+    vfx,
+)
 
 # --- 1. CONFIGURACIÓN DEL PROYECTO ---
 # Asegúrate de que los nombres de archivo coincidan con los que descargaste.
