@@ -45,3 +45,16 @@ python3 codigo.py
 ```
 
 El video final se guardará con el nombre `video_final_MitoVsRealidad.mp4`.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
+
+## Resolución de conflictos de merge
+
+Cuando Git no puede fusionar automáticamente tus cambios, resuelve los conflictos siguiendo estos pasos:
+
+1. Ejecuta `git status` para ver qué archivos tienen conflicto.
+2. Abre cada archivo en conflicto y elimina los marcadores que puso Git, dejando el código que quieres conservar.
+3. Haz stage de los archivos corregidos con `git add`.
+4. Finaliza el merge haciendo un commit con `git commit`.
