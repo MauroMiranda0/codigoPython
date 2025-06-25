@@ -23,17 +23,21 @@ BODY_FONT_SIZE = 90
 
 
 def main():
+    """Genera un video en base a los clips y recursos configurados."""
+
     # --- VERIFICACIÓN DE ARCHIVOS (para evitar errores) ---
     for path in [CLIP_MITO_PATH, CLIP_REALIDAD_PATH, CLIP_SISTEMA_PATH, CLIP_CTA_PATH, AUDIO_PATH]:
         if not os.path.exists(path):
             raise FileNotFoundError(
                 f"Error: El archivo '{path}' no se encuentra. Asegúrate de que esté en la misma carpeta que el script."
             )
-    if not os.path.exists(FONT_PATH):
+
+    font_path = FONT_PATH
+    if not os.path.exists(font_path):
         print(
-            f"Advertencia: Fuente '{FONT_PATH}' no encontrada. Se usará una fuente predeterminada."
+            f"Advertencia: Fuente '{font_path}' no encontrada. Se usará una fuente predeterminada."
         )
-        FONT_PATH = 'Arial-Bold'  # Fuente de respaldo
+        font_path = "Arial-Bold"  # Fuente de respaldo
 
     # --- 2. CREACIÓN DE LAS ESCENAS ---
 
@@ -56,7 +60,7 @@ def main():
         "MITO",
         fontsize=HEADER_FONT_SIZE,
         color=TEXT_COLOR,
-        font=FONT_PATH,
+        font=font_path,
         stroke_color=TEXT_STROKE_COLOR,
         stroke_width=TEXT_STROKE_WIDTH,
     ).set_pos("center").set_duration(3)
@@ -65,7 +69,7 @@ def main():
             "“Con tener redes ya vendo” ❌",
             fontsize=BODY_FONT_SIZE,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
@@ -93,7 +97,7 @@ def main():
         "REALIDAD",
         fontsize=HEADER_FONT_SIZE,
         color=TEXT_COLOR,
-        font=FONT_PATH,
+        font=font_path,
         stroke_color=TEXT_STROKE_COLOR,
         stroke_width=TEXT_STROKE_WIDTH,
     ).set_pos("center").set_duration(4)
@@ -102,7 +106,7 @@ def main():
             "Las redes son solo el anzuelo 🎣",
             fontsize=BODY_FONT_SIZE,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
@@ -132,7 +136,7 @@ def main():
             "Atraes en redes...",
             fontsize=BODY_FONT_SIZE,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
@@ -145,7 +149,7 @@ def main():
             "...llevas a un lugar...",
             fontsize=BODY_FONT_SIZE,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
@@ -158,7 +162,7 @@ def main():
             "...y AHÍ es donde vendes. ⚙️",
             fontsize=BODY_FONT_SIZE,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
@@ -187,7 +191,7 @@ def main():
         "Y tú, ¿ya tienes un sistema\no solo publicas?",
         fontsize=BODY_FONT_SIZE,
         color=TEXT_COLOR,
-        font=FONT_PATH,
+        font=font_path,
         stroke_color=TEXT_STROKE_COLOR,
         stroke_width=TEXT_STROKE_WIDTH,
         align="center",
@@ -197,7 +201,7 @@ def main():
             "👇 Cuéntame abajo 👇",
             fontsize=BODY_FONT_SIZE - 10,
             color=TEXT_COLOR,
-            font=FONT_PATH,
+            font=font_path,
             stroke_color=TEXT_STROKE_COLOR,
             stroke_width=TEXT_STROKE_WIDTH,
         )
