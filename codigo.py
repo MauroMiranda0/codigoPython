@@ -39,7 +39,7 @@ clip_mito_base = (VideoFileClip(CLIP_MITO_PATH)
                   .fx(vfx.blackwhite)) # Efecto blanco y negro para el mito
 
 txt_mito_header = TextClip("MITO", fontsize=HEADER_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos('center').set_duration(3)
-txt_mito_body = TextClip("“Con tener redes ya vendo” ❌", fontsize=BODY_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos(('center', 'center', 150)).set_duration(3)
+txt_mito_body = TextClip("“Con tener redes ya vendo” ❌", fontsize=BODY_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos(('center', 150)).set_duration(3)
 
 scene1 = CompositeVideoClip([clip_mito_base, txt_mito_header, txt_mito_body]).set_duration(3)
 
@@ -51,7 +51,7 @@ clip_realidad_base = (VideoFileClip(CLIP_REALIDAD_PATH)
                       .crop(x_center=VIDEO_SIZE[0]/2, y_center=VIDEO_SIZE[1]/2, width=VIDEO_SIZE[0], height=VIDEO_SIZE[1]))
 
 txt_realidad_header = TextClip("REALIDAD", fontsize=HEADER_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos('center').set_duration(4)
-txt_realidad_body = TextClip("Las redes son solo el anzuelo 🎣", fontsize=BODY_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos(('center', 'center', 150)).set_duration(4)
+txt_realidad_body = TextClip("Las redes son solo el anzuelo 🎣", fontsize=BODY_FONT_SIZE, color=TEXT_COLOR, font=FONT_PATH, stroke_color=TEXT_STROKE_COLOR, stroke_width=TEXT_STROKE_WIDTH).set_pos(('center', 150)).set_duration(4)
 
 scene2 = CompositeVideoClip([clip_realidad_base, txt_realidad_header, txt_realidad_body]).set_duration(4)
 
