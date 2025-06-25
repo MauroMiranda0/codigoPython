@@ -1,21 +1,60 @@
 # codigoPython
 
-## Installation
+Este proyecto contiene un script llamado `codigo.py` que genera un video vertical a partir de varios clips, un audio de fondo y una fuente personalizada.
 
-Install dependencies with:
+## Requisitos
+
+1. **Python 3**
+2. **moviepy** - Librería para edición de video.
+3. **ffmpeg** - Backend necesario para procesar video y audio.
+
+Puedes instalar las dependencias de Python ejecutando:
 
 ```bash
-pip install -r requirements.txt
+pip install moviepy
 ```
-## License
 
-This project is licensed under the [MIT License](LICENSE).
+Asegúrate también de que `ffmpeg` esté disponible en tu sistema. En la mayoría de las distribuciones de Linux puedes instalarlo con:
 
-## Resolving merge conflicts
+```bash
+sudo apt-get install ffmpeg
+```
 
-When Git cannot automatically merge your changes, resolve the conflicts by following these steps:
+## Archivos de entrada
 
-1. Run `git status` to see which files are in conflict.
-2. Open each conflicted file and remove the conflict markers, keeping the desired code.
-3. Stage the corrected files with `git add`.
-4. Finish the merge by committing the resolution with `git commit`.
+Coloca los siguientes archivos en la misma carpeta que `codigo.py`:
+
+- `clip_mito.mp4`        – Primer video (3 s).
+- `clip_realidad.mp4`    – Segundo video (4 s).
+- `clip_sistema.mp4`     – Tercer video (5 s).
+- `clip_cta.mp4`         – Cuarto video (4 s).
+- `musica_fondo.mp3`     – Pista de audio.
+- `fuente_personalizada.ttf` – Fuente opcional para los textos. Si no se encuentra, se usará una fuente predeterminada.
+
+## Ejecución
+
+Desde la terminal, ejecuta los siguientes pasos:
+
+```bash
+# 1. Instala las dependencias (si no lo has hecho)
+pip install moviepy
+sudo apt-get install ffmpeg
+
+# 2. Ejecuta el script
+python3 codigo.py
+```
+
+El video final se guardará con el nombre `video_final_MitoVsRealidad.mp4`.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
+
+## Resolución de conflictos de merge
+
+Cuando Git no puede fusionar automáticamente tus cambios, resuelve los conflictos siguiendo estos pasos:
+
+1. Ejecuta `git status` para ver qué archivos tienen conflicto.
+2. Abre cada archivo en conflicto y elimina los marcadores que puso Git, dejando el código que quieres conservar.
+3. Haz stage de los archivos corregidos con `git add`.
+4. Finaliza el merge haciendo un commit con `git commit`.
