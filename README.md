@@ -1,10 +1,12 @@
-# codigoPython
+Este proyecto contiene un script llamado `codigo.py` que genera un video vertical a partir de varios clips, un audio de fondo y una fuente personalizada.
 
-## Resolving Merge Conflicts
+## Requisitos
 
-1. Run `git status` to see which files are conflicted.
-2. Open each conflicted file and edit the sections marked by Git to keep the correct content.
-3. When the conflicts are resolved, stage the files with `git add <files>`.
-4. Commit the resolution using `git commit` with an explanatory message.
+1. **Python 3**
+2. **moviepy** - Librería para edición de video.
+3. **ffmpeg** - Backend necesario para procesar video y audio.
 
-After committing, you can continue your workflow as usual.
+Puedes instalar las dependencias de Python ejecutando:
+
+```bash
+pip install moviepy
