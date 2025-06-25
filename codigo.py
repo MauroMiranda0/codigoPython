@@ -1,27 +1,27 @@
 # -*- coding: utf-8 -*-
 import os
-from moviepy.editor import *
-
-# --- 1. CONFIGURACIÓN DEL PROYECTO ---
-# Asegúrate de que los nombres de archivo coincidan con los que descargaste.
-CLIP_MITO_PATH = "clip_mito.mp4"
-CLIP_REALIDAD_PATH = "clip_realidad.mp4"
-CLIP_SISTEMA_PATH = "clip_sistema.mp4"
-CLIP_CTA_PATH = "clip_cta.mp4"
-AUDIO_PATH = "musica_fondo.mp3"
-FONT_PATH = "fuente_personalizada.ttf" # Si no tienes una, puedes comentar esta línea
-OUTPUT_FILENAME = "video_final_MitoVsRealidad.mp4"
-
-# Parámetros de video y texto
-VIDEO_SIZE = (1080, 1920) # Formato vertical para TikTok/Reels
-TEXT_COLOR = 'white'
-TEXT_STROKE_COLOR = 'black'
-TEXT_STROKE_WIDTH = 2
-HEADER_FONT_SIZE = 120
-BODY_FONT_SIZE = 90
+from moviepy.editor import VideoFileClip, AudioFileClip, TextClip, concatenate_videoclips, CompositeVideoClip, vfx
 
 def main():
     """Genera un video en base a los clips y recursos configurados."""
+
+    # --- 1. CONFIGURACIÓN DEL PROYECTO ---
+    # Asegúrate de que los nombres de archivo coincidan con los que descargaste.
+    CLIP_MITO_PATH = "clip_mito.mp4"
+    CLIP_REALIDAD_PATH = "clip_realidad.mp4"
+    CLIP_SISTEMA_PATH = "clip_sistema.mp4"
+    CLIP_CTA_PATH = "clip_cta.mp4"
+    AUDIO_PATH = "musica_fondo.mp3"
+    FONT_PATH = "fuente_personalizada.ttf"  # Si no tienes una, puedes comentar esta línea
+    OUTPUT_FILENAME = "video_final_MitoVsRealidad.mp4"
+
+    # Parámetros de video y texto
+    VIDEO_SIZE = (1080, 1920)  # Formato vertical para TikTok/Reels
+    TEXT_COLOR = "white"
+    TEXT_STROKE_COLOR = "black"
+    TEXT_STROKE_WIDTH = 2
+    HEADER_FONT_SIZE = 120
+    BODY_FONT_SIZE = 90
 
     # --- VERIFICACIÓN DE ARCHIVOS (para evitar errores) ---
     for path in [CLIP_MITO_PATH, CLIP_REALIDAD_PATH, CLIP_SISTEMA_PATH, CLIP_CTA_PATH, AUDIO_PATH]:
